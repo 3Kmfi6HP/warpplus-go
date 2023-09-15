@@ -194,6 +194,6 @@ while true; do
         else
                 echo "$(date +'%H:%M:%S') 端点 $endpoint 状态正常"
                 sleep 60
-                [ -f "mjj" ] && ./mjj -max 10 || speedtest -s 49365
+                [ -f "mjj" ] && ./mjj -max 10 & || speedtest -s 49365
         fi
 done
