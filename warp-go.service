@@ -1,0 +1,10 @@
+[Unit]
+Description=CloudFlare Warp flood speedtest
+After=network.target
+
+[Service]
+ExecStart=/root/warpplus-go/wireguard-go.sh >> /root/warpplus-go/wireguard-go.log
+Restart=always
+RestartSec=10s
+[Install]
+WantedBy=multi-user.target
